@@ -4,13 +4,11 @@ import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporte
 import { textSummary } from "https://jslib.k6.io/k6-summary/0.0.1/index.js";
 
 const preproductionVariables = {
-  baseUrl: 'https://api.preproduction.smartsari.com'
+  baseUrl: 'https://test-api.k6.io'
 }
 
 const productionVariables = {
-  baseUrl: 'https://api.smartsari.com',
-  phoneNumber: '+639690399737',
-  otpNumber: '37118'
+  baseUrl: 'https://test-api.k6.io'
 }
 
 export const variables = __ENV.environment == 'production' ? productionVariables : preproductionVariables
